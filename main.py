@@ -72,13 +72,17 @@ def DecryptMessage(sourceMessage, key):
     return result
 
 shift = 1
-try:
-    shift = int(input("How many shifts for the key?"))
-except:
-    print("Invalid input, setting shift to 1")
-    shift = 1
-finally:
-    pass
+###Error corrected version
+# try:
+#     shift = int(input("How many shifts for the key?"))
+# except:
+#     print("Invalid input, setting shift to 1")
+#     shift = 1
+# finally:
+#     pass
+
+###Simple version
+shift = int(input("How many shifts for the key?"))
 
 ceaser = CreateCipher(shift)
 
